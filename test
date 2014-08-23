@@ -24,7 +24,6 @@ g++ -D__AUTOCOMPILER__ -std=c++0x $problem.cpp
 
 wget http://codeforces.com/contest/$round/problem/$problem
 
-clear
 mv $problem .nameIn
 
 echo ' '
