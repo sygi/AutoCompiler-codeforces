@@ -1,3 +1,4 @@
+// Jakub Sygnowski
 #include <algorithm>
 #include <cmath>
 #include <iostream>
@@ -13,31 +14,17 @@
 #include <set>
 using namespace std;
 
-#ifdef __APPLE__
-	#ifndef __AUTOCOMPILER__
-		#define cin fin
-		ifstream fin("input");
-	#endif
-	
-	inline void debug() {
+inline void debug() {
+}
+template <typename _type, typename... type>
+	inline void debug(_type arg, const type&... next) {
+		cout << arg;
+		debug(next...);
 	}
-	template <typename _type, typename... type>
-		inline void debug(_type arg, const type&... next) {
-			cout << arg;
-			debug(next...);
-		}
-#else
-	inline void debug() {
-	}
-	template <typename _type, typename... type>
-		inline void debug(_type arg, const type&... next) {
-		}
-#endif
 
-
-#define mp make_pair
-#define fi first
-#define se second
+#define MP make_pair
+#define F first
+#define S second
 
 typedef long long int64;
 
@@ -46,30 +33,4 @@ typedef long long int64;
 
 
 int main() {
-	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
