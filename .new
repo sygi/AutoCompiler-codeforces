@@ -8,7 +8,8 @@ else
 fi
 
 mkdir $line
-git clone https://github.com/vladtarniceru/AutoCompiler-codeforces $line
+cp * $line
+cp .* $line
 
 cd $line
 touch input

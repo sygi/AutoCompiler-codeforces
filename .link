@@ -8,7 +8,7 @@ else
 fi
 
 for var in {A..E}; do
-	firefox codeforces.com/contest/$round/problem/$var
+	chromium-browser codeforces.com/contest/$round/problem/$var &
 done
 
 
