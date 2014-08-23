@@ -20,9 +20,9 @@
 
 **Code:**
 
-  `map SHORTCUT :w! <CR> :!./.test % <CR>`
+  `map SHORTCUT :w! <CR> :!./test %< <CR>`
 
-  `imap SHORTCUT <ESC> :w! <CR> :!./.test % <CR>`
+  `imap SHORTCUT <ESC> :w! <CR> :!./test %< <CR>`
 
 **UPDATE:**
 - now you do not have to enter the name of the round anymore... just enter the name of the problem.
@@ -32,5 +32,3 @@
 **IMPORTANT:**
 - note that you will have to print an empty line in the output.
 - for example, if you have to print one number, you should do `cout << NUMBER << "\n";`.
-
-If you find, report any bugs at *vladtarniceru@gmail.com*.
