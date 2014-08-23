@@ -1,7 +1,5 @@
 #/bin/bash
 
-clear
-
 read round < .roundName
 if [ $1 ] ; then
 	problem=$1
@@ -10,6 +8,10 @@ else
 	read problem
 fi
 
+if ! [[ -e $problem.cpp ]]; then
+    echo -e "File ${problem}.cpp not found"
+    exit 1
+fi
 # if [[ $problem == *.cpp ]]; then
 #     for foo in {1..4}; do
 #         problem=${problem%?}
@@ -26,13 +28,9 @@ wget http://codeforces.com/contest/$round/problem/$problem --quiet
 
 mv $problem .nameIn
 
-echo ' '
-echo ' '
 ./.getInput
 ./.runTests
-echo ' '
-echo ' '
-echo ' '
+echo -e "\n\n"
 
 rm -rf a.out
 
