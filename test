@@ -22,15 +22,26 @@ problem="$(echo $problem | head -c 1)"
 
 rm -rf a.out
 
-g++ -D__AUTOCOMPILER__ -std=c++0x $problem.cpp
+if [ "$2" == "d" ] ; then
+    g++ -DDEBUG -std=c++0x $problem.cpp
+else
+    g++ -std=c++0x $problem.cpp
+fi
+
+if ! [[ -e a.out ]]; then
+    echo -e "Compilation error"
+    exit 1
+else
+    echo "Compilation successful"
+fi
+
 
 wget http://codeforces.com/contest/$round/problem/$problem --quiet
+
+echo "Tests downloaded"
 
 mv $problem .nameIn
 
 ./.getInput
 ./.runTests
 echo -e "\n\n"
-
-rm -rf a.out
-
