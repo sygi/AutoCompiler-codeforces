@@ -16,9 +16,9 @@ for (( var=1; ; var++ )); do
 		echo '---------------------------------------------------------------'
 		
 		if diff -q .fisout .test$var.out > /dev/null ; then	
-			res[$((var))]='AC'
+			res[$((var))]='\e[42m\e[1m  AC  \e[49m\e[0m'
 		else
-			res[$((var))]='WA'
+			res[$((var))]='\e[41m\e[1m  WA  \e[49m\e[0m'
 		fi
         echo -e "Status: ${res[$var]}"
 		echo ' '
@@ -32,7 +32,7 @@ done
 echo -e '---------------------------------------------------------------------------\n\n'
 echo 'Result:'
 for (( foo=1; $foo<$var; foo++ )); do
-	echo -e ${res[$foo]}
+	echo -e "${res[$foo]}"
 done
 
 rm -r -f .*.in

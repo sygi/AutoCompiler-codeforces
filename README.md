@@ -7,8 +7,8 @@
 - copy `.new` file in your folder, then `bash .new`.
 
 ### How to create a new round: ###
-- write in your terminal `bash .new RoundName`, then `cd RoundName`.
-- to open all the problems from a round (browser) write `./.link` and tell the round id.
+- write in your terminal `source new RoundName` (ex. source new 213) or `. new RoundName`
+- to open all the problems from a round in chromium write `./link` and tell the round id.
 
 ### How to run tests: ###
 
