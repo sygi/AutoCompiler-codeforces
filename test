@@ -22,7 +22,7 @@ rm -rf a.out
 
 g++ -D__AUTOCOMPILER__ -std=c++0x $problem.cpp
 
-wget http://codeforces.com/contest/$round/problem/$problem
+wget http://codeforces.com/contest/$round/problem/$problem --quiet
 
 mv $problem .nameIn
 

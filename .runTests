@@ -1,9 +1,5 @@
 #/bin/bash
 
-clear
-
-echo ' '
-echo ' '
 for (( var=1; ; var++ )); do
 	if [[ -a .test$var.in ]]; then
 		
@@ -20,12 +16,11 @@ for (( var=1; ; var++ )); do
 		echo '---------------------------------------------------------------'
 		
 		if diff -q .fisout .test$var.out > /dev/null ; then	
-			echo '               Status:   OK !                                      YES !'
-			res[$((var))]='OK !'
+			res[$((var))]='AC'
 		else
-			echo '               Status:   WA !                                      NO !'
-			res[$((var))]='WA !'
+			res[$((var))]='WA'
 		fi
+        echo -e "Status: ${res[$var]}"
 		echo ' '
 		echo ' '
 
@@ -34,12 +29,10 @@ for (( var=1; ; var++ )); do
 	fi	
 done
 
-echo '---------------------------------------------------------------------------'
-echo ' '
-echo ' '
-echo '     Result:'
+echo -e '---------------------------------------------------------------------------\n\n'
+echo 'Result:'
 for (( foo=1; $foo<$var; foo++ )); do
-	echo '       '${res[$((foo))]};
+	echo -e ${res[$foo]}
 done
 
 rm -r -f .*.in
