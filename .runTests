@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 for (( var=1; ; var++ )); do
 	if [[ -a .test$var.in ]]; then
@@ -40,7 +40,5 @@ rm -r -f .*.out
 rm -r -f .fisout
 rm -r -f .nameIn
 
-echo ' '
-echo ' '
-echo ' '
+echo -e "\n"
 
