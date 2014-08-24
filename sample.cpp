@@ -31,13 +31,18 @@ template <typename _type, typename... type>
 	}
 #endif
 
+#ifdef ONLINE_JUDGE
+#define lld I64d
+#endif
+
 #define mp make_pair
 #define F first
 #define S second
 #define pb push_back
+#define rep((I),(N)) for(int (I)=0;(I)<(N);(I)++)
 
-typedef long long int64;
 typedef pair<int,int> pii;
+typedef long long ll;
 
 // ---------- TEMPLATE CODE ENDS HERE ----------
 
