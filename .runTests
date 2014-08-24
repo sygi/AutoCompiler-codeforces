@@ -15,7 +15,7 @@ for (( var=1; ; var++ )); do
 		cat .fisout
 		echo '---------------------------------------------------------------'
 		
-		if diff -q .fisout .test$var.out > /dev/null ; then	
+		if diff -wq .fisout .test$var.out > /dev/null ; then	
 			res[$((var))]='\e[42m\e[1m  AC  \e[49m\e[0m'
 		else
 			res[$((var))]='\e[41m\e[1m  WA  \e[49m\e[0m'
