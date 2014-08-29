@@ -39,7 +39,7 @@ template <typename _type, typename... type>
 #define F first
 #define S second
 #define pb push_back
-#define rep((I),(N)) for(int (I)=0;(I)<(N);(I)++)
+#define rep(I,N) for(int (I)=0;(I)<(N);(I)++)
 
 typedef pair<int,int> pii;
 typedef long long ll;
